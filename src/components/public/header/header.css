@@ -1,0 +1,41 @@
+@import "../../../styles/colors.css";
+
+.header {
+  width: 100%;
+  height: 60vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-opacity {
+  position: absolute;
+  background: rgba(25, 123, 189, 0.2);
+  width: 100%;
+  height: 60vh;
+  top: 0;
+  z-index: 2;
+}
+
+.header .info {
+  z-index: 3;
+  text-align: center;
+}
+
+.header .info h1,
+h4 {
+  width: auto;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .header .info h1 {
+    font-size: 2em;
+  }
+  .header .info h4 {
+    font-size: 1.1em;
+  }
+}

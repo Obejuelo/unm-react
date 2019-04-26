@@ -1,0 +1,10 @@
+@import "../../../styles/colors.css";
+
+.section {
+  background: var(--main-dark);
+}
+
+.section .row .col-item {
+  display: flex;
+  justify-content: center;
+}

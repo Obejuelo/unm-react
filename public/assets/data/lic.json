@@ -1,0 +1,220 @@
+{
+    "administracion": {
+        "objetivo": [
+            {
+                "p": "El aspirante a cursar la Licenciatura en Administración deberá tener actitud de éxito individual, gran disposición para el trabajo colaborativo, además de una excelente apertura para integrarse a la organización que represente."
+            },
+            {
+                "p": "Un buen administrador busca satisfacer las necesidades del hombre en la sociedad, coordinando y aprovechando de manera eficiente los recursos materiales y humanos que tiene a su alcance."
+            }
+        ],
+        "campo": [
+            {
+                "p": "El Licenciado en Administración realiza sus actividades en instituciones del sector público o privado, optimizando los recursos de la organización mediante la toma de decisiones que promueven la adaptación e innovación, propiciando el logro de los propósitos de productividad, calidad, competitividad, contribuyendo con ello al desarrollo social y económico de la región y del país."
+            }
+        ],
+        "plan": {
+            "primero": [
+                {"c":"Introducción a la Administración"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"}     
+            ],
+            "segundo": [
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"}     
+            ],
+            "tercero": [
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"}     
+            ],
+            "cuarto": [
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"}     
+            ],
+            "quinto": [
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"}     
+            ],
+            "sexto": [
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"}     
+            ],
+            "septimo": [
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"}     
+            ],
+            "octavo": [
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"}     
+            ]
+        }
+    },
+    "pedagogia": {
+        "objetivo": [
+            {"p": "El aspirante a cursar la carrera de Pedagogía deberá mostrar interés en:"},
+            { "p": "Identificar y evaluar las perspectivas educativas de las instituciones de educación pública y privada."},
+            { "p": "Proponer modelos educativos con base en el diagnóstico del contexto socioeconómico y político del fenómeno educativo."},
+            { "p": "Evaluar las prácticas docentes en todos los niveles educativos a través de la construcción y aplicación de instrumentos de medición, objetivos confiables y válidos."}
+        ],
+        "campo": [
+            {"p": "El Licenciado en pedagogía es un profesionista con capacidad para identificar, analizar y valorar fenómenos educativos, en todos los niveles: básico, medio, medio superior y superior, en sus modalidades escolarizada y no escolarizada; influye en los sectores público y privado, con el fin de fundamentar alternativas de solución óptimas y viables para el progreso educativo de la región y del país."}
+        ],
+        "plan": {
+            "primero": [
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"}     
+            ],
+            "segundo": [
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"}     
+            ],
+            "tercero": [
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"}     
+            ],
+            "cuarto": [
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"}     
+            ],
+            "quinto": [
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"}     
+            ],
+            "sexto": [
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"}     
+            ],
+            "septimo": [
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"}     
+            ],
+            "octavo": [
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"}     
+            ]
+        }
+    },
+    "sistemas": {
+        "objetivo": [
+            {"p": "Parrafo"},
+            { "p": "Parrafo"},
+            { "p": "Parrafo"},
+            { "p": "Parrafo"}
+        ],
+        "campo": [
+            {"p": "Parrafo"}
+        ],
+        "plan": {
+            "primero": [
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"}     
+            ],
+            "segundo": [
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"}     
+            ],
+            "tercero": [
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"}     
+            ],
+            "cuarto": [
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"}     
+            ],
+            "quinto": [
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"}     
+            ],
+            "sexto": [
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"}     
+            ],
+            "septimo": [
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"}     
+            ],
+            "octavo": [
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"},
+                {"c":"Introducción"}     
+            ]
+        }
+    },
+    "requisitos": [
+        {"p": "Acta de nacimiento (original y 2 copias)"},
+        {"p": "Certificado de secundaria (original y 2 copias)"},
+        {"p": "Certificado de bachillerato (original y 2 copias)"},
+        {"p": "4 fotografías en blanco y negro, terminado mate, tamaño infantil, tomadas de frente, con orejas descubiertas, no instantáneas, tomadas con ropa color blanco. (mujeres, sin aretes, cabello recogido)."},
+        {"p": "CURP"}
+    ]
+}

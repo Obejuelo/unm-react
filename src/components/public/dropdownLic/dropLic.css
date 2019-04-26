@@ -1,0 +1,25 @@
+.drop-container {
+    display: flex;
+    justify-content: center;
+}
+
+.drop-container .dropdown-lic {
+    position: absolute;
+    background: var(--main-light);
+    width: 250px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px var(--shadow);
+    z-index: 5;
+}
+
+.drop-container .dropdown-lic p {
+    margin: 0;
+    padding: 2px;
+    cursor: pointer;
+    transition: all .1s;
+}
+
+.drop-container .dropdown-lic p:hover {
+    color: var(--main-light);
+    background: var(--plight);
+}

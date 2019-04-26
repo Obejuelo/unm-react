@@ -1,0 +1,21 @@
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.title-text {
+  width: 300px;
+  height: 39px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 34px solid transparent;
+  border-left: 34px solid transparent;
+  border-top: 39px solid var(--main-primary);
+}
+.title-text h5 {
+  position: relative;
+  top: -12px;
+  color: var(--main-light);
+  text-align: center;
+}

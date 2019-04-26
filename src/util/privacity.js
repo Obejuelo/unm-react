@@ -1,0 +1,3 @@
+// export const privacity = [
+//     title
+// ]

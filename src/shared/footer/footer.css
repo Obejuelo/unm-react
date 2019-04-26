@@ -1,0 +1,114 @@
+footer {
+  width: 100%;
+  overflow: hidden;
+  background: var(--main-primary);
+}
+
+footer .center p,
+footer .spam p {
+  padding: 1px;
+  margin: 0;
+  color: var(--main-light);
+  font-size: 0.8em;
+  text-align: center;
+}
+
+footer .copy p {
+  margin: 0;
+  text-align: center;
+  color: var(--main-light);
+  font-size: 0.8em;
+}
+
+footer .center,
+footer .spam {
+  margin-top: 15px;
+}
+
+footer .center p,
+footer .spam p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .center p .icon,
+footer .spam p .icon {
+  margin-right: 3px;
+  font-size: 15px;
+}
+
+footer .center p:nth-child(1) .icon,
+footer .spam p:nth-child(1) .icon {color: red;}
+
+footer .center p:nth-child(2) .icon,
+footer .spam p:nth-child(2) .icon {color: aqua;}
+
+footer .center p:nth-child(3) .icon,
+footer .spam p:nth-child(3) .icon {color: yellowgreen; transform: rotate(90deg);}
+
+footer .social {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+footer .social div {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+footer .social div:nth-child(1) {
+  background: #3f65ad;
+}
+footer .social div:nth-child(2) {
+  background: #009eed;
+}
+footer .social div:nth-child(3) {
+  background: #ff0802;
+}
+footer .social div:nth-child(4) {
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+
+footer .social .facebook,
+footer .social .twitter,
+footer .social .youtube,
+footer .social .instagram {
+  font-size: 1.2em;
+  margin: 3px;
+  color: var(--main-light);
+}
+
+footer .instagram {
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+
+footer .copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .copy .privacity {
+  opacity: 0.8;
+  text-decoration: none;
+  font-style: italic;
+  transition: all 0.1s;
+}
+
+footer .copy .privacity:hover {
+  opacity: 1;
+}
