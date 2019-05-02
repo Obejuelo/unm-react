@@ -15,8 +15,10 @@ import Lic from './routes/Lic';
 import Postgr from './routes/Postgr';
 import Bach from './routes/Bach';
 import Spam from './routes/Spam';
+import Prepa from './routes/Prepa';
 import Directory from './routes/Directory';
 import Facilities from './routes/Facilities';
+import SingleNew from './routes/SingleNew';
 
 function App() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -56,8 +58,10 @@ function App() {
               <Route path='/master' component={()=><Postgr container={cont}/>} />
               <Route path='/bach' component={()=><Bach container={cont}/>} />
               <Route path='/spam' component={()=><Spam container={cont}/>} />
+              <Route path='/prepa' component={()=><Prepa container={cont}/>} />
               <Route path='/directory' component={Directory} />
               <Route path='/facilities' component={()=><Facilities container={cont}/>} />
+              <Route path='/single-new/:id' component={SingleNew} />
             </Switch>
 
           </CSSTransition>

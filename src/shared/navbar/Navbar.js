@@ -60,7 +60,7 @@ export default function () {
                 <Dropdown
                     links={oferta}
                     title='Oferta Académica'
-                    width='251px' />
+                    width='160px' />
                 <li><Link to='/news'>Noticias</Link></li>
                 <li><Link to='/galery'>Galería</Link></li>
                 <li><Link to='/contact'>Contacto</Link></li>

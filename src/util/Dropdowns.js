@@ -22,7 +22,10 @@ export const oferta = [{
     name: 'Bachillerato General',
     url: 'bach'
 }, {
-    name: 'Secundaria y Preparatoria Abierta',
+    name: 'preparatoria Abierta',
+    url: 'prepa',
+},{
+    name: 'Secundaria Abierta',
     url: 'spam',
 }, {
     name: 'Internacionalización',
