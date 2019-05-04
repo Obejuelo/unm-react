@@ -1,0 +1,12 @@
+.spinner-email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 220px;
+    height: 200px;
+}
+
+.customOverlay {
+    background: rgba(157, 222, 250, 0.3);
+}

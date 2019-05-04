@@ -26,21 +26,22 @@ export default function() {
         }
     },[]);
 
-    return([
-        <div className={cont} key={1}>
-             <div className="row">
-                <div 
-                    className="col-12 text-center"
-                    style={{marginTop: '56px'}}>
-                    <img src={singleNew.image} alt="notice" className='img-fluid'/>
+    return(
+        <div className="page">
+            <div className={cont}>
+                <div className="row mt-1">
+                    <div 
+                        className="col-12 text-center">
+                        <img src={singleNew.image} alt="notice" className='img-fluid'/>
+                    </div>
                 </div>
-             </div>
-             <div className="row justify-content-center">
-                <div className="col-12 col-lg-8">
-                    <p className="text-justify">{singleNew.info}</p>
+                <div className="row justify-content-center">
+                    <div className="col-12 col-lg-8">
+                        <p className="text-justify">{singleNew.info}</p>
+                    </div>
                 </div>
-             </div>
-        </div>,
-        <Footer key={2}/>
-    ])
+            </div>,
+            <Footer/>
+        </div>
+    )
 }
