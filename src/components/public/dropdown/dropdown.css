@@ -1,58 +1,59 @@
 /* @import "../../styles/colors.css"; */
 
 .dropdown {
-  height: 100%;
-  align-items: center;
-  transition: all 0.2s;
-  display: flex;
-  cursor: pointer;
+    height: 100%;
+    align-items: center;
+    transition: all 0.2s;
+    display: flex;
+    cursor: pointer;
 }
 
 .dropdown p {
-  margin: 0;
-  color: var(--main-light);
-  align-self: center;
-  padding: 0 7px;
+    margin: 0;
+    color: var(--main-light);
+    align-self: center;
+    padding: 0 7px;
 }
 
 .dropdown .link {
-  position: absolute;
-  top: 100%;
-  display: flex;
-  flex-direction: column;
-  background: var(--plight);
-  overflow: hidden;
-  height: 0px;
-  opacity: 0;
-  box-shadow: 0px 2px 7px rgba(23, 23, 23, 0.5);
-  transform: translateY(-5px);
-  transition: all 0.3s ease-out;
-  border-top: solid 3px transparent;
+    position: absolute;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--plight);
+    overflow: hidden;
+    height: 0px;
+    opacity: 0;
+    box-shadow: 0px 2px 7px rgba(23, 23, 23, 0.5);
+    transform: translateY(-5px);
+    transition: all 0.3s ease-out;
+    /* border-top: solid 3px transparent; */
 }
 
 .dropdown .link li {
-  display: flex;
-  flex-direction: column;
-  display: block;
-  width: 100%;
+    display: flex;
+    flex-direction: column;
+    display: block;
+    width: 100%;
 }
 
 .dropdown .link li a {
-  display: block;
-  width: 100%;
-  padding: 2px;
+    display: block;
+    width: 100%;
+    padding: 2px;
 }
 
 .dropdown:hover {
-  background: var(--plight);
+    background: var(--plight);
 }
 
-.dropdown:hover > .link {
-  display: flex;
-  transform: translateY(0px);
-  height: auto;
-  opacity: 1;
+.dropdown:hover>.link {
+    display: flex;
+    transform: translateY(0px);
+    height: auto;
+    opacity: 1;
 }
+
 
 /* .dropdown:active > .link {
   display: flex;
@@ -61,20 +62,20 @@
   opacity: 0;
 } */
 
-.dropdown:hover > .arrow-icon {
-  background: red;
-  font-size: 2em;
+.dropdown:hover>.arrow-icon {
+    background: red;
+    font-size: 2em;
 }
 
 .dropdown .link li:hover {
-  background: var(--main-primary);
+    background: var(--main-primary);
 }
 
 @keyframes drop {
-  from {
-    height: 0px;
-  }
-  to {
-    height: auto;
-  }
+    from {
+        height: 0px;
+    }
+    to {
+        height: auto;
+    }
 }

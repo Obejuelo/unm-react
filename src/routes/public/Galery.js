@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react';
-import { resize, container } from '../util/resize';
-import Title from '../shared/title/Title';
-import Footer from '../shared/footer/Footer';
+import { resize, container } from '../../util/resize';
+import Title from '../../shared/title/Title';
+import Footer from '../../shared/footer/Footer';
 import Gallery from 'react-photo-gallery';
+import Navbar from '../../shared/navbar/Navbar';
 import Lightbox from 'react-images';
 
 export default function () {
@@ -50,28 +51,31 @@ export default function () {
     }
 
     return (
-        <div className="page">
-            <Title title='Galería' />
-            <div className="my-3"></div>
-            <div className={cont}>
-                {
-                    photos.length !== 0 
-                    ?   <Gallery photos={photos} onClick={changeLightbox}/>
-                    :   <div className="progress-bar">
-                            <div className="spinner-border" role="status">
-                                <span className="sr-only">Loading...</span>
+        <div>
+            <Navbar/>
+            <div className='page'>
+                <Title title='Galería' />
+                <div className="my-3"></div>
+                <div className={cont}>
+                    {
+                        photos.length !== 0 
+                        ?   <Gallery photos={photos} onClick={changeLightbox}/>
+                        :   <div className="progress-bar">
+                                <div className="spinner-border" role="status">
+                                    <span className="sr-only">Loading...</span>
+                                </div>
                             </div>
-                        </div>
-                }
+                    }
+                </div>
+                <Lightbox 
+                    images={photos}
+                    onClose={closeLightbox}
+                    isOpen={openLightbox}
+                    currentImage={currentImage}
+                    onClickNext={gotoNext}
+                    onClickPrev={gotoPrevious}/>
+                <Footer />
             </div>
-            <Lightbox 
-                images={photos}
-                onClose={closeLightbox}
-                isOpen={openLightbox}
-                currentImage={currentImage}
-                onClickNext={gotoNext}
-                onClickPrev={gotoPrevious}/>
-            <Footer />
         </div>
     )
 }

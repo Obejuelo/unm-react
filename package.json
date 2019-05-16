@@ -10,11 +10,16 @@
     "react-iframe": "^1.5.0",
     "react-images": "^0.5.19",
     "react-photo-gallery": "^7.0.2",
+    "react-redux": "^7.0.3",
     "react-responsive-modal": "^3.6.0",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
+    "react-router-redux": "^4.0.8",
     "react-scripts": "2.1.5",
-    "react-transition-group": "^2.5.3"
+    "react-transition-group": "^2.5.3",
+    "redux": "^4.0.1",
+    "redux-localstorage": "^0.4.1",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",

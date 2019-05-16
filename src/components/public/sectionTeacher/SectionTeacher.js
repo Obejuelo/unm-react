@@ -1,7 +1,7 @@
 import React from 'react';
 import CardTeacher from './CardTeacher';
 
-export default function({title, data}) {
+export default function({data}) {
 
     function renderTeachers() {
         if(data === undefined)
@@ -16,7 +16,6 @@ export default function({title, data}) {
 
     return(
         <div>
-            <h3 className='text-center'>{title}</h3>
             <div className="row justify-content-center my-4">
                 {renderTeachers()}
             </div>

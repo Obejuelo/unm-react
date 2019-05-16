@@ -25,6 +25,33 @@ body {
 }
 
 
+/* LOGIN */
+
+.login {
+    width: 100%;
+    height: 100vh;
+    background: var(--main-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login .card-login {
+    padding: 10px 20px;
+    text-align: center;
+    width: 300px;
+    background: var(--main-light);
+    border-radius: 3px;
+    box-shadow: 0 10px 20px var(--shadow);
+}
+
+.login .card-login .form input {
+    margin: 20px 0;
+    font-weight: normal;
+}
+
+
 /* ANIMATIONS */
 
 .fade-enter {

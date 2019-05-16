@@ -1,0 +1,117 @@
+.barra-lateral {
+    background: #262a34;
+    color: #fff;
+    min-width: 300px;
+    min-height: 100vh;
+    max-height: 100vh;
+    padding: 0 0;
+    z-index: 5;
+}
+
+.barra-lateral a {
+    color: #fff;
+}
+
+
+/* --- LOGO --- */
+
+.barra-lateral .logo {
+    background: #0275db;
+    margin-bottom: 2px;
+}
+
+.barra-lateral .logo h2 {
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    padding: 20px 0;
+    text-align: center;
+    font-weight: 300;
+    margin: 0;
+}
+
+
+/* --- MENU --- */
+
+.barra-lateral .menu a {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+
+.barra-lateral .menu a:hover {
+    background: #35ae6b;
+    text-decoration: none;
+}
+
+.barra-lateral .menu a span {
+    margin-left: 20px;
+    font-weight: normal;
+}
+
+
+/* --- --- MAIN --- --- */
+
+.main {
+    padding-top: 40px;
+}
+
+.main .columna {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.main .titulo {
+    color: #262a34;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
+}
+
+.main .widget {
+    margin-bottom: 40px;
+}
+
+
+/* --- --- MEDIAQUERIES --- --- */
+
+@media screen and (max-width: 1300px) {
+    .barra-lateral {
+        min-width: auto;
+    }
+    .barra-lateral .logo {
+        display: none;
+    }
+    .barra-lateral .menu a span {
+        display: none;
+    }
+    .barra-lateral .menu a i {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .barra-lateral {
+        min-height: auto;
+    }
+    .barra-lateral .menu a {
+        display: inline-block;
+        border-bottom: none;
+    }
+    .main .widget form button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .main .comentarios .comentario .foto {
+        width: 30px;
+        height: 30px;
+    }
+    .main .comentarios .comentario .botones button {
+        width: 100%;
+    }
+}

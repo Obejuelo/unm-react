@@ -4,9 +4,9 @@ import './cardnew.css';
 
 export default function CardNew({title, info, image, _id}) {
     const url = `url('${image}')`;
-    const desc = info.substr(1 - 200);
+    const desc = info.substr(0 , 200);
     return(
-        <div className="card card-news">
+        <div className="card card-news mb-3">
             <div className="card-img" style={{backgroundImage: url}}></div>
             <div className="card-body text-center">
                 <h5>{title}</h5>

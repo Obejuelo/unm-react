@@ -1,42 +1,109 @@
 import React, {useState, useEffect} from 'react';
 import { resize, container } from './util/resize';
 import { Route, Switch } from 'react-router';
+import {withRouter} from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import Home from './routes/Home';
-import News from './routes/News';
-import Navbar from './shared/navbar/Navbar';
-import Contact from './routes/Contact';
-import Galery from './routes/Galery';
-import Philosophy from './routes/Philosophy';
-import History from './routes/History';
-import Privacity from './routes/Privacity';
-import Inter from './routes/Inter';
-import Lic from './routes/Lic';
-import Postgr from './routes/Postgr';
-import Bach from './routes/Bach';
-import Spam from './routes/Spam';
-import Prepa from './routes/Prepa';
-import Directory from './routes/Directory';
-import Facilities from './routes/Facilities';
-import SingleNew from './routes/SingleNew';
+import Home from './routes/public/Home';
+import News from './routes/public/News';
+import Contact from './routes/public/Contact';
+import Galery from './routes/public/Galery';
+import Philosophy from './routes/public/Philosophy';
+import History from './routes/public/History';
+import Privacity from './routes/public/Privacity';
+import Inter from './routes/public/Inter';
+import Lic from './routes/public/Lic';
+import Postgr from './routes/public/Postgr';
+import Bach from './routes/public/Bach';
+import Spam from './routes/public/Spam';
+import Prepa from './routes/public/Prepa';
+import Directory from './routes/public/Directory';
+import Facilities from './routes/public/Facilities';
+import SingleNew from './routes/public/SingleNew';
+import Login from './routes/public/Login';
+
+// Url to fetch
+import {url} from './util/config';
+// Private routes
+import Dashboard from './routes/private/Dashboard';
+import Dgalery from './routes/private/Dgalery';
 
 function App() {
   const [width, setWidth] = useState(window.innerWidth);
   const [cont, setCont] = useState('');
+  const [token, setToken] = useState('');
+  const [login, setLogin] =useState(false);
 
     useEffect(() => {
         function updateWidth() { resize(setWidth); }
         setCont(container(width));
         window.addEventListener('resize', updateWidth);
         
-        return () => {
-            window.removeEventListener('resize', updateWidth);
+        const auth = (auth) => {
+          let body = {token: auth};
+    
+          fetch(`${url}api/session`, {
+              method: 'POST',
+              body: JSON.stringify(body),
+              headers:{
+                  'Accept': 'application/json',
+                  'Content-Type': 'application/json'
+              }
+          }).then(res=>res.json())
+          .then(data => {
+              if(data.ok){
+                setLogin(true);
+                // console.log(data);
+              }
+          }).catch(err=>{
+              console.log(err);
+          });
         }
-    }, [width, cont])
+
+        const changeToken = () => {
+          if(localStorage.length !== 0) {
+            let user = JSON.parse(localStorage.getItem('user'));
+            setToken(user.token);
+            auth(user.token);
+          }
+        }
+        changeToken();
+        
+        return () => {
+            window.removeEventListener('resize', ()=>{
+              updateWidth();
+              changeToken();
+            });
+        }
+    }, [width, cont, token]);
+
+    const signIn = (body) => {
+      fetch(`${url}api/login`, {
+          method: 'POST',
+          body: JSON.stringify(body),
+          headers:{
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+          }
+      }).then(res=>res.json())
+      .then(data => {
+          if(data.ok === true){
+              setToken(data.token);
+              localStorage.setItem('user', JSON.stringify(data));
+          }
+          else console.log(data);
+          
+      }).catch(err => {
+          console.log(err);
+      });
+    }
+
+    const authenticate = () => {
+      if(login) return Dashboard
+      else return Home
+    }
 
   return (
     <div className="App">
-      <Navbar />
       <Route render={({ location }) => (
         <TransitionGroup>
           <CSSTransition
@@ -44,7 +111,7 @@ function App() {
             timeout={300}
             classNames="fade">
 
-            {/* Routes and pages */}
+            {/* Public Routes and */}
             <Switch location={location}>
               <Route exact path='/' component={()=><Home container={cont}/>} />
               <Route path='/news' component={News} />
@@ -62,8 +129,12 @@ function App() {
               <Route path='/directory' component={Directory} />
               <Route path='/facilities' component={()=><Facilities container={cont}/>} />
               <Route path='/single-new/:id' component={SingleNew} />
-            </Switch>
 
+              {/* Private Routes */}
+              <Route path='/login' component={()=><Login token={token} signIn={signIn}/>}/>
+              <Route path='/dashboard/home' component={authenticate()}/>
+              <Route path='/dashboard/galery' component={Dgalery}/>
+            </Switch>
           </CSSTransition>
         </TransitionGroup>
       )} />
@@ -71,4 +142,4 @@ function App() {
   );
 }
 
-export default App;
+export default withRouter(App);

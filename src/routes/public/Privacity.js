@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { resize, container } from '../util/resize';
-import Title from '../shared/title/Title';
-import Footer from '../shared/footer/Footer';
+import { resize, container } from '../../util/resize';
+import Title from '../../shared/title/Title';
+import Navbar from '../../shared/navbar/Navbar';
+import Footer from '../../shared/footer/Footer';
 
 export default function () {
     const [width, setWidth] = useState(window.innerWidth);
@@ -17,12 +18,15 @@ export default function () {
     }, [width, cont])
 
     return (
-        <div className='page'>
-            <Title title='Aviso de Privacidad' />
-            <div className={cont}>
-                <h2>Privacidad</h2>
+        <div>
+            <Navbar/>
+            <div className='page'>
+                <Title title='Aviso de Privacidad' />
+                <div className={cont}>
+                    <h2>Privacidad</h2>
+                </div>
+                <Footer />
             </div>
-            <Footer />
         </div>
     )
 }
