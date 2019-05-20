@@ -32,7 +32,9 @@
 
 /* --- MENU --- */
 
-.barra-lateral .menu a {
+.barra-lateral .menu a,
+.barra-lateral .menu .logOut {
+    cursor: pointer;
     display: flex;
     align-items: center;
     padding: 20px;
@@ -41,7 +43,12 @@
     border-bottom: 1px solid rgba(255, 255, 255, .1);
 }
 
-.barra-lateral .menu a:hover {
+.barra-lateral .menu .logout {
+    margin-right: 20px;
+}
+
+.barra-lateral .menu a:hover,
+.barra-lateral .menu .logOut:hover {
     background: #35ae6b;
     text-decoration: none;
 }

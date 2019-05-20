@@ -1,16 +1,12 @@
 import React, {Component} from 'react';
 import {withRouter} from 'react-router-dom';
 import {url} from '../../util/config';
-import SpinnerWaith from '../../shared/private/SpinnerWaith';
+import AlertErr from '../../shared/private/AlertErr';
+import SpinnerLogin from '../../shared/private/SpinnerLogin';
 
 class Login extends Component{
     emailRef = new React.createRef();
     passRef = new React.createRef()
-
-    state = {
-        token: this.props.token,
-        spinner: false
-    }
 
     componentWillMount(){
         if(localStorage.length !== 0){
@@ -19,17 +15,12 @@ class Login extends Component{
     }
 
     signIn = (e) => {
-        this.setState({spinner: true})
         e.preventDefault();
         let body = {
             email: this.emailRef.current.value,
             pass: this.passRef.current.value
         }
         this.props.signIn(body);
-        // setTimeout(() => {
-        //     this.setState({spinner: false})
-        //     this.props.history.push('dashboard/home');
-        // }, 2000);
     }
 
     authenticate = () => {
@@ -58,27 +49,29 @@ class Login extends Component{
             <div className='login'>
                 <div className='card-login'>
                     <h4 className='text-muted'>Login</h4>
-                    <form className='form'>
+                    <form className='form' onSubmit={this.signIn}>
                         <input 
-                            type="text"
+                            type="email"
                             ref={this.emailRef}
                             className='form-control'
-                            placeholder='User (email)'/>
+                            placeholder='User (email)'
+                            required/>
                         <input 
                             type="password"
                             ref={this.passRef}
                             className='form-control'
-                            placeholder='Password'/>
+                            placeholder='Password'
+                            required/>
                         <div className='text-center'>
                             <button
-                                className='btn btn-sm btn-dark'
-                                onClick={this.signIn}>
+                                className='btn btn-sm btn-dark'>
                                 Entrar
                             </button>
                         </div>
                     </form>
                 </div>
-                {this.state.spinner ? <SpinnerWaith/> : ''}
+                {this.props.sp ? <SpinnerLogin/> : ''}
+                {this.props.al ? <AlertErr/> : ''}
             </div>
         )
     }

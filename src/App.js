@@ -32,6 +32,8 @@ function App() {
   const [cont, setCont] = useState('');
   const [token, setToken] = useState('');
   const [login, setLogin] =useState(false);
+  const [spinner, setSpinner] = useState(false);
+  const [alert, setAlert] = useState(false);
 
     useEffect(() => {
         function updateWidth() { resize(setWidth); }
@@ -52,7 +54,6 @@ function App() {
           .then(data => {
               if(data.ok){
                 setLogin(true);
-                // console.log(data);
               }
           }).catch(err=>{
               console.log(err);
@@ -77,6 +78,7 @@ function App() {
     }, [width, cont, token]);
 
     const signIn = (body) => {
+      setSpinner(true);
       fetch(`${url}api/login`, {
           method: 'POST',
           body: JSON.stringify(body),
@@ -87,14 +89,24 @@ function App() {
       }).then(res=>res.json())
       .then(data => {
           if(data.ok === true){
-              setToken(data.token);
-              localStorage.setItem('user', JSON.stringify(data));
+            localStorage.setItem('user', JSON.stringify(data));
+            setToken(data.token);
+          } else {
+            setSpinner(false);
+            changeAlert();
+            // console.log(data);
           }
-          else console.log(data);
           
       }).catch(err => {
           console.log(err);
       });
+    }
+
+    const changeAlert = () => {
+      setAlert(true);
+      setTimeout(() => {
+          setAlert(false);
+      }, 5000);
     }
 
     const authenticate = () => {
@@ -131,7 +143,7 @@ function App() {
               <Route path='/single-new/:id' component={SingleNew} />
 
               {/* Private Routes */}
-              <Route path='/login' component={()=><Login token={token} signIn={signIn}/>}/>
+              <Route path='/login' component={()=><Login signIn={signIn} sp={spinner} al={alert}/>}/>
               <Route path='/dashboard/home' component={authenticate()}/>
               <Route path='/dashboard/galery' component={Dgalery}/>
             </Switch>
