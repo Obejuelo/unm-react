@@ -8,12 +8,15 @@ export default function() {
     const [singleNew, setSingleNew] = useState([]);
     const [width, setWidth] = useState(window.innerWidth);
     const [cont, setCont] = useState('');
+    const [info, setInfo] = useState([]);
 
     useEffect(()=>{
         fetch(`http://localhost:5000/news/${url}`)
         .then(res => res.json())
         .then(data=>{
             setSingleNew(data)
+            const pnew = data.info.split('. ');
+            setInfo(pnew);
         }).catch(err=>{
             console.log(err);
         });
@@ -40,7 +43,9 @@ export default function() {
                     </div>
                     <div className="row justify-content-center">
                         <div className="col-12 col-lg-8">
-                            <p className="text-justify">{singleNew.info}</p>
+                            {info.map((text, idx)=>(
+                                <p className="text-justify" key={idx}>{text}.</p>
+                            ))}
                         </div>
                     </div>
                 </div>,

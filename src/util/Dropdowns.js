@@ -2,9 +2,6 @@ export const somos = [{
     name: 'Directorio',
     url: 'directory'
 }, {
-    name: 'Instalaciones',
-    url: 'facilities'
-}, {
     name: 'Filosofía Institucional',
     url: 'philosophy'
 }, {
@@ -49,3 +46,11 @@ export const licenciaturas = [{
 },{
     name: 'sistemas'
 }]
+
+
+/**
+ * {
+    name: 'Instalaciones',
+    url: 'facilities'
+    }
+ */

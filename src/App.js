@@ -17,7 +17,7 @@ import Bach from './routes/public/Bach';
 import Spam from './routes/public/Spam';
 import Prepa from './routes/public/Prepa';
 import Directory from './routes/public/Directory';
-import Facilities from './routes/public/Facilities';
+// import Facilities from './routes/public/Facilities';
 import SingleNew from './routes/public/SingleNew';
 import Login from './routes/public/Login';
 
@@ -26,6 +26,7 @@ import {url} from './util/config';
 // Private routes
 import Dashboard from './routes/private/Dashboard';
 import Dgalery from './routes/private/Dgalery';
+import Users from './routes/private/Users';
 
 function App() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -94,7 +95,6 @@ function App() {
           } else {
             setSpinner(false);
             changeAlert();
-            // console.log(data);
           }
           
       }).catch(err => {
@@ -125,7 +125,7 @@ function App() {
 
             {/* Public Routes and */}
             <Switch location={location}>
-              <Route exact path='/' component={()=><Home container={cont}/>} />
+              <Route exact path='/' component={Home} />
               <Route path='/news' component={News} />
               <Route path='/contact' component={Contact} />
               <Route path='/galery' component={Galery} />
@@ -134,18 +134,19 @@ function App() {
               <Route path='/privacity' component={Privacity} />
               <Route path='/inter' component={Inter} />
               <Route path='/lic' component={Lic} />
-              <Route path='/master' component={()=><Postgr container={cont}/>} />
+              <Route path='/master' component={Postgr} />
               <Route path='/bach' component={()=><Bach container={cont}/>} />
               <Route path='/spam' component={()=><Spam container={cont}/>} />
               <Route path='/prepa' component={()=><Prepa container={cont}/>} />
               <Route path='/directory' component={Directory} />
-              <Route path='/facilities' component={()=><Facilities container={cont}/>} />
+              {/* <Route path='/facilities' component={()=><Facilities container={cont}/>} /> */}
               <Route path='/single-new/:id' component={SingleNew} />
 
               {/* Private Routes */}
               <Route path='/login' component={()=><Login signIn={signIn} sp={spinner} al={alert}/>}/>
               <Route path='/dashboard/home' component={authenticate()}/>
               <Route path='/dashboard/galery' component={Dgalery}/>
+              <Route path='/dashboard/users' component={Users}/>
             </Switch>
           </CSSTransition>
         </TransitionGroup>

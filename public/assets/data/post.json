@@ -1,0 +1,51 @@
+{
+    "administracion": {
+        "objetivo": [{
+                "p": "El aspirante a cursar la Licenciatura en Administración deberá tener actitud de éxito individual, gran disposición para el trabajo colaborativo, además de una excelente apertura para integrarse a la organización que represente."
+            },
+            {
+                "p": "Un buen administrador busca satisfacer las necesidades del hombre en la sociedad, coordinando y aprovechando de manera eficiente los recursos materiales y humanos que tiene a su alcance."
+            }
+        ],
+        "campo": [{
+            "p": "El Licenciado en Administración realiza sus actividades en instituciones del sector público o privado, optimizando los recursos de la organización mediante la toma de decisiones que promueven la adaptación e innovación, propiciando el logro de los propósitos de productividad, calidad, competitividad, contribuyendo con ello al desarrollo social y económico de la región y del país."
+        }],
+        "plan": {
+            "primero": [
+                { "c": "Introducción a la Administración" },
+                { "c": "Introducción" },
+                { "c": "Introducción" },
+                { "c": "Introducción" },
+                { "c": "Introducción" }
+            ],
+            "segundo": [
+                { "c": "Introducción" },
+                { "c": "Introducción" },
+                { "c": "Introducción" },
+                { "c": "Introducción" },
+                { "c": "Introducción" }
+            ],
+            "tercero": [
+                { "c": "Introducción" },
+                { "c": "Introducción" },
+                { "c": "Introducción" },
+                { "c": "Introducción" },
+                { "c": "Introducción" }
+            ],
+            "cuarto": [
+                { "c": "Introducción" },
+                { "c": "Introducción" },
+                { "c": "Introducción" },
+                { "c": "Introducción" },
+                { "c": "Introducción" }
+            ]
+        }
+    },
+    "requisitos": [
+        { "p": "Acta de nacimiento (original y 2 copias)" },
+        { "p": "Certificado de secundaria (original y 2 copias)" },
+        { "p": "Certificado de bachillerato (original y 2 copias)" },
+        { "p": "4 fotografías en blanco y negro, terminado mate, tamaño infantil, tomadas de frente, con orejas descubiertas, no instantáneas, tomadas con ropa color blanco. (mujeres, sin aretes, cabello recogido)." },
+        { "p": "CURP" }
+    ]
+}

@@ -1,10 +1,9 @@
-import React, {Component} from 'react';
-import {withRouter} from 'react-router-dom';
+import React, { Component } from 'react';
 import {url} from '../../util/config';
 import SideBar from '../../shared/private/SideBar';
-import Dnews from '../../components/private/Dnews';
+import ChangePass from '../../components/private/ChangePass';
 
-class Dashboard extends Component {
+class Users extends Component {
 
     componentDidMount(){
         this.verifyStorage()
@@ -38,18 +37,18 @@ class Dashboard extends Component {
         });
     }
 
-    render() {
-        return(
+    render() { 
+        return (
             <div className=''>
                 <div className="container-fluid">
                     <div className="row">
-                        <SideBar logOut={this.logOut}/>
-                        <Dnews/>
+                        <SideBar/>
+                        <ChangePass/>
                     </div>
                 </div>
             </div>
-        )
+        );
     }
 }
-
-export default withRouter(Dashboard);
+ 
+export default Users;
