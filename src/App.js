@@ -44,7 +44,7 @@ function App() {
         const auth = (auth) => {
           let body = {token: auth};
     
-          fetch(`${url}api/session`, {
+          fetch(`${url}session`, {
               method: 'POST',
               body: JSON.stringify(body),
               headers:{
@@ -80,7 +80,7 @@ function App() {
 
     const signIn = (body) => {
       setSpinner(true);
-      fetch(`${url}api/login`, {
+      fetch(`${url}login`, {
           method: 'POST',
           body: JSON.stringify(body),
           headers:{

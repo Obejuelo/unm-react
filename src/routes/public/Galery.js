@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { resize, container } from '../../util/resize';
+import {url} from '../../util/config';
 import Title from '../../shared/title/Title';
 import Footer from '../../shared/footer/Footer';
 import Gallery from 'react-photo-gallery';
@@ -15,7 +16,7 @@ export default function () {
 
     useEffect(()=>{
         let images = [];
-        fetch('http://localhost:5000/image')
+        fetch(`${url}image`)
             .then(res => res.json())
             .then(data => {
                 data.reverse().forEach(item=>{

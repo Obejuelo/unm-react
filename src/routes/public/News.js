@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { resize, container } from '../../util/resize';
+import {url} from '../../util/config';
 import Title from '../../shared/title/Title';
 import Navbar from '../../shared/navbar/Navbar';
 import Footer from '../../shared/footer/Footer';
@@ -11,7 +12,7 @@ export default function () {
     const [cont, setCont] = useState('');
 
     useEffect(()=>{
-        fetch('http://localhost:5000/news')
+        fetch(`${url}news`)
             .then(res => res.json())
             .then(data => {
                 setNews(data.reverse())

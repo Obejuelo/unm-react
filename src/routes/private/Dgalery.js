@@ -26,7 +26,7 @@ class Dgalery extends Component {
         let store = JSON.parse(localStorage.getItem('user'));
         let body = {token: store.token};
 
-        fetch(`${url}api/session`, {
+        fetch(`${url}session`, {
             method: 'POST',
             body: JSON.stringify(body),
             headers:{

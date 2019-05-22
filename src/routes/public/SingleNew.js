@@ -1,17 +1,18 @@
 import React, {useState, useEffect} from 'react';
 import { resize, container } from '../../util/resize';
+import {url} from '../../util/config';
 import Navbar from '../../shared/navbar/Navbar';
 import Footer from '../../shared/footer/Footer';
 
 export default function() {
-    const [url] = useState(window.location.pathname.split('/')[2]);
+    const [id] = useState(window.location.pathname.split('/')[2]);
     const [singleNew, setSingleNew] = useState([]);
     const [width, setWidth] = useState(window.innerWidth);
     const [cont, setCont] = useState('');
     const [info, setInfo] = useState([]);
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/news/${url}`)
+        fetch(`${url}news/${id}`)
         .then(res => res.json())
         .then(data=>{
             setSingleNew(data)

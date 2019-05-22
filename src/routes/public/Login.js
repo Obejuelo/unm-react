@@ -27,7 +27,7 @@ class Login extends Component{
         let storage = JSON.parse(localStorage.getItem('user'));
         let body = {token: storage.token};
 
-        fetch(`${url}api/session`, {
+        fetch(`${url}session`, {
             method: 'POST',
             body: JSON.stringify(body),
             headers:{
